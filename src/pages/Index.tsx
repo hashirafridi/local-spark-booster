@@ -138,16 +138,14 @@ const Index = () => {
 
       {/* VIDEO SECTION */}
       <section className="bg-black">
-        <div className="max-w-5xl mx-auto px-4 py-8">
-          <div style={{ aspectRatio: "16/9" }}>
-            <iframe
-              className="w-full h-full rounded-lg"
-              src="https://www.youtube.com/embed/vPUuAwBZblY"
-              title="Vigilant Security Services"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
+        <div className="w-full" style={{ aspectRatio: "16/9", maxHeight: "600px" }}>
+          <iframe
+            className="w-full h-full"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Vigilant Security Services"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
         </div>
       </section>
 
