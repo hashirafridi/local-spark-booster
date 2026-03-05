@@ -4,6 +4,7 @@ import {
   ClipboardCheck, Award, GraduationCap, Settings, TrendingUp, ChevronRight,
   Phone, ArrowRight, CheckCircle2, Calendar
 } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const services = [
   {
