@@ -297,32 +297,15 @@ const Index = () => {
             Trusted Partners To
           </p>
           <div className="relative overflow-hidden">
-            <div className="flex animate-scroll gap-16 items-center">
-              {[...Array(2)].flatMap((_, setIndex) =>
-                [
-                  { name: "SecureGuard", logo: partnerLogo1 },
-                  { name: "UrbanShield Properties", logo: partnerLogo2 },
-                  { name: "Metropolitan Police" },
-                  { name: "NHS" },
-                  { name: "Tesco" },
-                  { name: "Barclays" },
-                  { name: "Hilton" },
-                  { name: "Wembley" },
-                  { name: "O2 Arena" },
-                  { name: "Canary Wharf" },
-                ].map((item, i) => (
-                  <div
+            <div className="flex animate-scroll gap-20 items-center">
+              {[...Array(8)].flatMap((_, setIndex) =>
+                [partnerLogo1, partnerLogo2].map((logo, i) => (
+                  <img
                     key={`${setIndex}-${i}`}
-                    className="shrink-0 flex items-center justify-center h-16 px-6 rounded-md border border-border bg-muted/50"
-                  >
-                    {'logo' in item && item.logo ? (
-                      <img src={item.logo} alt={item.name} className="h-12 w-auto object-contain" />
-                    ) : (
-                      <span className="text-muted-foreground font-semibold text-sm tracking-wide whitespace-nowrap">
-                        {item.name}
-                      </span>
-                    )}
-                  </div>
+                    src={logo}
+                    alt="Partner logo"
+                    className="shrink-0 h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                  />
                 ))
               )}
             </div>
