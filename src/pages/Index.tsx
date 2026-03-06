@@ -304,7 +304,7 @@ const Index = () => {
                     key={`${setIndex}-${i}`}
                     src={logo}
                     alt="Partner logo"
-                    className="shrink-0 h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                    className="shrink-0 h-24 md:h-32 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
                   />
                 ))
               )}
