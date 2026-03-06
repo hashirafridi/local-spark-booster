@@ -172,17 +172,17 @@ const Index = () => {
                 key={s.title}
                 className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group border border-border"
               >
-                <div className="h-36 overflow-hidden">
+                <div className="h-36 overflow-hidden relative">
                   <img
                     src={serviceImages[index % serviceImages.length]}
                     alt={s.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
+                  <div className="absolute top-3 right-3 w-10 h-10 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-sm">
+                    <s.icon className="w-5 h-5 text-primary" />
+                  </div>
                 </div>
                 <div className="p-6">
-                  <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    <s.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors" />
-                  </div>
                   <h3 className="font-semibold text-foreground text-base mb-2">{s.title}</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
                   <Link
