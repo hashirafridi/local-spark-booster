@@ -205,15 +205,9 @@ const Index = () => {
           <div className="mb-10">
             <span className="text-primary text-xs font-semibold uppercase tracking-widest">Why Us</span>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mt-2">Why Choose Vigilant Security?</h2>
-            <p className="text-muted-foreground mt-3 max-w-3xl text-sm leading-relaxed">
-              With over two decades of experience, Vigilant Security Services has earned a reputation as one of London's most trusted security providers. Our SIA-approved, professionally trained officers deliver tailored solutions that protect your people, property, and peace of mind — day and night.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            <div className="rounded-xl overflow-hidden shadow-lg">
-              <img src={whyChooseImg} alt="Vigilant Security team" className="w-full h-full object-cover" />
-            </div>
             <div className="space-y-5">
               {whyChoose.map((item) => (
                 <div key={item.title} className="flex gap-4 p-5 rounded-lg border border-border hover:border-primary/30 transition-colors">
@@ -226,6 +220,9 @@ const Index = () => {
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <img src={whyChooseImg} alt="Vigilant Security team" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
