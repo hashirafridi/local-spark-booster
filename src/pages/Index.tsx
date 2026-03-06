@@ -139,15 +139,15 @@ const Index = () => {
 
       {/* VIDEO SECTION */}
       <section className="bg-black">
-        <div className="w-full max-w-7xl mx-auto" style={{ height: "360px" }}>
-          <iframe
-            className="w-full h-full"
-            src="https://www.youtube.com/embed/vPUuAwBZblY"
-            title="Vigilant Security Services"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
+        <video
+          className="w-full"
+          style={{ maxHeight: "360px", objectFit: "cover" }}
+          src={heroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
       </section>
 
       {/* SERVICES */}
