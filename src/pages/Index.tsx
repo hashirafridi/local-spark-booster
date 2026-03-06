@@ -288,6 +288,32 @@ const Index = () => {
         </div>
       </section>
 
+      {/* TRUSTED PARTNERS LOGOS */}
+      <section className="bg-white border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 py-10 md:py-14">
+          <p className="text-center text-muted-foreground text-sm font-semibold uppercase tracking-widest mb-8">
+            Trusted Partners To
+          </p>
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll gap-16 items-center">
+              {[...Array(2)].flatMap((_, setIndex) =>
+                [
+                  "Metropolitan Police", "NHS", "Tesco", "Barclays", "Hilton",
+                  "Wembley", "O2 Arena", "Canary Wharf", "Westfield", "JLL"
+                ].map((name, i) => (
+                  <div
+                    key={`${setIndex}-${i}`}
+                    className="shrink-0 px-6 py-3 rounded-md border border-border bg-muted/50 text-muted-foreground font-semibold text-sm tracking-wide whitespace-nowrap"
+                  >
+                    {name}
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CONTACT SECTION */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 py-14 md:py-20">
