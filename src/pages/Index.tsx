@@ -9,7 +9,7 @@ import heroVideo from "@/assets/hero-video.mp4";
 import service1 from "@/assets/service-1.jpg";
 import service2 from "@/assets/service-2.jpg";
 import service3 from "@/assets/service-3.jpg";
-import whyChooseImg from "@/assets/why-choose-us.jpg";
+import whyChooseImg from "@/assets/why-choose-us.png";
 
 const serviceImages = [service1, service2, service3];
 
