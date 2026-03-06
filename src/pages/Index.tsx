@@ -201,30 +201,30 @@ const Index = () => {
 
       {/* WHY CHOOSE US */}
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 py-14 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 py-10 md:py-14">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <span className="text-primary text-xs font-semibold uppercase tracking-widest">Why Us</span>
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mt-2">Why Choose Vigilant Security?</h2>
-              <p className="text-muted-foreground mt-3 text-sm leading-relaxed mb-6">
+              <p className="text-muted-foreground mt-2 text-sm leading-relaxed mb-5">
                 With over two decades of experience, Vigilant Security has established itself as a leading provider of professional security services across London and the UK. Our commitment to excellence, rigorous training standards, and client-focused approach set us apart in the industry.
               </p>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {whyChoose.map((item) => (
-                  <div key={item.title} className="flex gap-4 p-4 rounded-lg border border-border hover:border-primary/30 transition-colors">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                      <item.icon className="w-5 h-5 text-primary" />
+                  <div key={item.title} className="flex gap-3 p-3 rounded-lg border border-border hover:border-primary/30 transition-colors">
+                    <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                      <item.icon className="w-4 h-4 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground text-sm mb-1">{item.title}</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                      <h3 className="font-semibold text-foreground text-sm mb-0.5">{item.title}</h3>
+                      <p className="text-muted-foreground text-xs leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="rounded-xl overflow-hidden shadow-lg">
-              <img src={whyChooseImg} alt="Vigilant Security team" className="w-full h-full object-cover" />
+            <div className="rounded-xl overflow-hidden shadow-lg max-h-[500px]">
+              <img src={whyChooseImg} alt="Vigilant Security team" className="w-full h-full object-cover object-top" />
             </div>
           </div>
         </div>
