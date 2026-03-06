@@ -5,6 +5,7 @@ import {
   Phone, ArrowRight, CheckCircle2, Calendar
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import heroVideo from "@/assets/hero-video.mp4";
 
 const services = [
   {
