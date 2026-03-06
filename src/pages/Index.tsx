@@ -225,7 +225,6 @@ const Index = () => {
               <img src={whyChooseImg} alt="Vigilant Security team" className="w-full h-full object-cover" />
             </div>
           </div>
-          </div>
         </div>
       </section>
 
