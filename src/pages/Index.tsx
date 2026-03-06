@@ -9,7 +9,7 @@ import heroVideo from "@/assets/hero-video.mp4";
 import service1 from "@/assets/service-1.jpg";
 import service2 from "@/assets/service-2.jpg";
 import service3 from "@/assets/service-3.jpg";
-import whyChooseImg from "@/assets/why-choose-us.png";
+import whyChooseImg from "@/assets/why-choose-us.jpg";
 
 const serviceImages = [service1, service2, service3];
 
@@ -201,30 +201,28 @@ const Index = () => {
 
       {/* WHY CHOOSE US */}
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 py-10 md:py-14">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
-              <span className="text-primary text-xs font-semibold uppercase tracking-widest">Why Us</span>
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mt-2">Why Choose Vigilant Security?</h2>
-              <p className="text-muted-foreground mt-2 text-sm leading-relaxed mb-5">
-                With over two decades of experience, Vigilant Security has established itself as a leading provider of professional security services across London and the UK. Our commitment to excellence, rigorous training standards, and client-focused approach set us apart in the industry.
-              </p>
-              <div className="space-y-3">
-                {whyChoose.map((item) => (
-                  <div key={item.title} className="flex gap-3 p-3 rounded-lg border border-border hover:border-primary/30 transition-colors">
-                    <div className="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                      <item.icon className="w-4 h-4 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground text-sm mb-0.5">{item.title}</h3>
-                      <p className="text-muted-foreground text-xs leading-relaxed">{item.desc}</p>
-                    </div>
+        <div className="max-w-7xl mx-auto px-4 py-14 md:py-20">
+          <div className="mb-10">
+            <span className="text-primary text-xs font-semibold uppercase tracking-widest">Why Us</span>
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mt-2">Why Choose Vigilant Security?</h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="space-y-5">
+              {whyChoose.map((item) => (
+                <div key={item.title} className="flex gap-4 p-5 rounded-lg border border-border hover:border-primary/30 transition-colors">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                    <item.icon className="w-5 h-5 text-primary" />
                   </div>
-                ))}
-              </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1.5">{item.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="rounded-xl overflow-hidden shadow-lg max-h-[500px]">
-              <img src={whyChooseImg} alt="Vigilant Security team" className="w-full h-full object-cover object-top" />
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <img src={whyChooseImg} alt="Vigilant Security team" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
