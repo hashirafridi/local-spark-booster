@@ -9,6 +9,7 @@ import heroVideo from "@/assets/hero-video.mp4";
 import service1 from "@/assets/service-1.jpg";
 import service2 from "@/assets/service-2.jpg";
 import service3 from "@/assets/service-3.jpg";
+import whyChooseImg from "@/assets/why-choose-us.jpg";
 
 const serviceImages = [service1, service2, service3];
 
@@ -178,7 +179,7 @@ const Index = () => {
                     alt={s.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute top-3 right-3 w-10 h-10 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-sm">
+                  <div className="absolute top-3 left-3 w-10 h-10 rounded-lg bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-sm">
                     <s.icon className="w-5 h-5 text-primary" />
                   </div>
                 </div>
@@ -201,23 +202,28 @@ const Index = () => {
       {/* WHY CHOOSE US */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 py-14 md:py-20">
-          <div className="text-center mb-10">
+          <div className="mb-10">
             <span className="text-primary text-xs font-semibold uppercase tracking-widest">Why Us</span>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mt-2">Why Choose Vigilant Security?</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {whyChoose.map((item) => (
-              <div key={item.title} className="flex gap-4 p-5 rounded-lg border border-border hover:border-primary/30 transition-colors">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                  <item.icon className="w-5 h-5 text-primary" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="space-y-5">
+              {whyChoose.map((item) => (
+                <div key={item.title} className="flex gap-4 p-5 rounded-lg border border-border hover:border-primary/30 transition-colors">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                    <item.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1.5">{item.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-foreground mb-1.5">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <img src={whyChooseImg} alt="Vigilant Security team" className="w-full h-full object-cover" />
+            </div>
           </div>
         </div>
       </section>
