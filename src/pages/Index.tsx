@@ -91,19 +91,19 @@ const Index = () => {
       <section className="relative overflow-hidden" style={{ minHeight: "500px" }}>
         <div className="absolute inset-0">
           <img src={heroBg} alt="Security services" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-white/60" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 py-16 md:py-24 lg:py-32">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/20 border border-primary/30 rounded-full text-white text-xs font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/20 border border-primary/30 rounded-full text-primary text-xs font-medium mb-6">
               <Shield className="w-3.5 h-3.5" />
               Trusted Since 2004
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mb-5">
               London Security Services{" "}
               <span className="text-primary">You Can Trust</span>
             </h1>
-            <p className="text-neutral-300 text-base md:text-lg leading-relaxed mb-8 max-w-xl">
+            <p className="text-muted-foreground text-base md:text-lg leading-relaxed mb-8 max-w-xl">
               Delivering exceptional security services and peace of mind for businesses and individuals nationwide. SIA-approved, professionally trained officers.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
@@ -115,14 +115,13 @@ const Index = () => {
               </Link>
               <a
                 href="tel:+448009833321"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-neutral-500 text-white font-semibold rounded hover:bg-white/10 transition-colors text-sm"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-primary text-primary font-semibold rounded hover:bg-primary/10 transition-colors text-sm"
               >
                 <Phone className="w-4 h-4" /> 0800 983 3321
               </a>
             </div>
 
-            {/* Trust indicators */}
-            <div className="mt-10 flex flex-wrap gap-6 text-neutral-400 text-xs">
+            <div className="mt-10 flex flex-wrap gap-6 text-muted-foreground text-xs">
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-primary" /> SIA Approved
               </div>
