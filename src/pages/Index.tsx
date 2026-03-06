@@ -91,7 +91,7 @@ const Index = () => {
       <section className="relative overflow-hidden" style={{ minHeight: "500px" }}>
         <div className="absolute inset-0">
           <img src={heroBg} alt="Security services" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 py-16 md:py-24 lg:py-32">
           <div className="max-w-2xl">
