@@ -167,22 +167,31 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {services.map((s) => (
+            {services.map((s, index) => (
               <div
                 key={s.title}
-                className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow group border border-border"
+                className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group border border-border"
               >
-                <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  <s.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors" />
+                <div className="h-36 overflow-hidden">
+                  <img
+                    src={serviceImages[index % serviceImages.length]}
+                    alt={s.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-                <h3 className="font-semibold text-foreground text-base mb-2">{s.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
-                <Link
-                  to="/services"
-                  className="inline-flex items-center gap-1 text-primary text-sm font-medium mt-4 hover:gap-2 transition-all"
-                >
-                  Learn More <ChevronRight className="w-4 h-4" />
-                </Link>
+                <div className="p-6">
+                  <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    <s.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors" />
+                  </div>
+                  <h3 className="font-semibold text-foreground text-base mb-2">{s.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
+                  <Link
+                    to="/services"
+                    className="inline-flex items-center gap-1 text-primary text-sm font-medium mt-4 hover:gap-2 transition-all"
+                  >
+                    Learn More <ChevronRight className="w-4 h-4" />
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
