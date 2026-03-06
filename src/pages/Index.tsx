@@ -205,9 +205,6 @@ const Index = () => {
           <div className="mb-10">
             <span className="text-primary text-xs font-semibold uppercase tracking-widest">Why Us</span>
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mt-2">Why Choose Vigilant Security?</h2>
-            <p className="text-muted-foreground mt-3 max-w-2xl text-sm leading-relaxed">
-              With over two decades of experience, Vigilant Security has earned a reputation as one of London's most trusted security providers. Our SIA-approved, professionally trained officers deliver tailored solutions across every sector — from corporate offices to large-scale events. We combine cutting-edge technology with hands-on expertise to ensure your people, property, and assets are always protected.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
