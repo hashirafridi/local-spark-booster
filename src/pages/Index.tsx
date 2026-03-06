@@ -202,27 +202,26 @@ const Index = () => {
       {/* WHY CHOOSE US */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 py-14 md:py-20">
-          <div className="mb-10">
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">Why Us</span>
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mt-2">Why Choose Vigilant Security?</h2>
-            <p className="text-muted-foreground mt-3 max-w-2xl text-sm leading-relaxed">
-              With over two decades of experience, Vigilant Security has established itself as a leading provider of professional security services across London and the UK. Our commitment to excellence, rigorous training standards, and client-focused approach set us apart in the industry.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            <div className="space-y-5">
-              {whyChoose.map((item) => (
-                <div key={item.title} className="flex gap-4 p-5 rounded-lg border border-border hover:border-primary/30 transition-colors">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                    <item.icon className="w-5 h-5 text-primary" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <span className="text-primary text-xs font-semibold uppercase tracking-widest">Why Us</span>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mt-2">Why Choose Vigilant Security?</h2>
+              <p className="text-muted-foreground mt-3 text-sm leading-relaxed mb-6">
+                With over two decades of experience, Vigilant Security has established itself as a leading provider of professional security services across London and the UK. Our commitment to excellence, rigorous training standards, and client-focused approach set us apart in the industry.
+              </p>
+              <div className="space-y-4">
+                {whyChoose.map((item) => (
+                  <div key={item.title} className="flex gap-4 p-4 rounded-lg border border-border hover:border-primary/30 transition-colors">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                      <item.icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground text-sm mb-1">{item.title}</h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1.5">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
             <div className="rounded-xl overflow-hidden shadow-lg">
               <img src={whyChooseImg} alt="Vigilant Security team" className="w-full h-full object-cover" />
