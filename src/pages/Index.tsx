@@ -10,6 +10,8 @@ import service1 from "@/assets/service-1.jpg";
 import service2 from "@/assets/service-2.jpg";
 import service3 from "@/assets/service-3.jpg";
 import whyChooseImg from "@/assets/why-choose-us.jpg";
+import partnerLogo1 from "@/assets/partner-logo-1.png";
+import partnerLogo2 from "@/assets/partner-logo-2.png";
 
 const serviceImages = [service1, service2, service3];
 
@@ -298,14 +300,28 @@ const Index = () => {
             <div className="flex animate-scroll gap-16 items-center">
               {[...Array(2)].flatMap((_, setIndex) =>
                 [
-                  "Metropolitan Police", "NHS", "Tesco", "Barclays", "Hilton",
-                  "Wembley", "O2 Arena", "Canary Wharf", "Westfield", "JLL"
-                ].map((name, i) => (
+                  { name: "SecureGuard", logo: partnerLogo1 },
+                  { name: "UrbanShield Properties", logo: partnerLogo2 },
+                  { name: "Metropolitan Police" },
+                  { name: "NHS" },
+                  { name: "Tesco" },
+                  { name: "Barclays" },
+                  { name: "Hilton" },
+                  { name: "Wembley" },
+                  { name: "O2 Arena" },
+                  { name: "Canary Wharf" },
+                ].map((item, i) => (
                   <div
                     key={`${setIndex}-${i}`}
-                    className="shrink-0 px-6 py-3 rounded-md border border-border bg-muted/50 text-muted-foreground font-semibold text-sm tracking-wide whitespace-nowrap"
+                    className="shrink-0 flex items-center justify-center h-16 px-6 rounded-md border border-border bg-muted/50"
                   >
-                    {name}
+                    {'logo' in item && item.logo ? (
+                      <img src={item.logo} alt={item.name} className="h-12 w-auto object-contain" />
+                    ) : (
+                      <span className="text-muted-foreground font-semibold text-sm tracking-wide whitespace-nowrap">
+                        {item.name}
+                      </span>
+                    )}
                   </div>
                 ))
               )}
