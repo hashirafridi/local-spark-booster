@@ -201,12 +201,12 @@ const Index = () => {
 
       {/* WHY CHOOSE US */}
       <section className="bg-white">
-        <div className="max-w-7xl mx-auto px-4 py-14 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 py-10 md:py-14">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
-              <span className="text-primary text-xs font-semibold uppercase tracking-widest">Why Us</span>
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mt-2">Why Choose Vigilant Security?</h2>
-              <p className="text-muted-foreground mt-3 text-sm leading-relaxed mb-6">
+              <span className="text-primary text-sm font-semibold uppercase tracking-widest">Why Us</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2">Why Choose Vigilant Security?</h2>
+              <p className="text-muted-foreground mt-3 text-base leading-relaxed mb-6">
                 With over two decades of experience, Vigilant Security has established itself as a leading provider of professional security services across London and the UK. Our commitment to excellence, rigorous training standards, and client-focused approach set us apart from the competition. We pride ourselves on delivering tailored security solutions that protect your people, property, and peace of mind.
               </p>
               <div className="space-y-5">
