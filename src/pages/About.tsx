@@ -7,16 +7,19 @@ import partnerLogo2 from "@/assets/partner-logo-2.png";
 import partnerAchilles from "@/assets/partner-achilles.jpg";
 import partnerIso from "@/assets/partner-iso9001.png";
 import partnerSafe from "@/assets/partner-safecontractor.jpg";
+import service1 from "@/assets/service-1.jpg";
+import service2 from "@/assets/service-2.jpg";
+import service3 from "@/assets/service-3.jpg";
 
 const sectionLinks = [
-  { label: "Accreditations", icon: Shield },
-  { label: "Company Profile", icon: FileText },
-  { label: "Environmental Policy", icon: Leaf },
-  { label: "Equal Opportunities Policy", icon: Users },
-  { label: "Health and Safety Policy", icon: HeartHandshake },
-  { label: "Mission", icon: Target },
-  { label: "Quality Policy", icon: ClipboardCheck },
-  { label: "Staff Handbook", icon: BookOpen },
+  { label: "Accreditations", icon: Shield, img: service1 },
+  { label: "Company Profile", icon: FileText, img: service2 },
+  { label: "Environmental Policy", icon: Leaf, img: service3 },
+  { label: "Equal Opportunities Policy", icon: Users, img: service1 },
+  { label: "Health and Safety Policy", icon: HeartHandshake, img: service2 },
+  { label: "Mission", icon: Target, img: service3 },
+  { label: "Quality Policy", icon: ClipboardCheck, img: service1 },
+  { label: "Staff Handbook", icon: BookOpen, img: service2 },
 ];
 
 const fourPoints = [
@@ -49,10 +52,21 @@ const About = () => {
               <Link
                 key={item.label}
                 to="/about"
-                className="group cursor-pointer flex items-center gap-3 px-4 py-3 bg-white/5 border border-white/10 rounded-sm text-white text-sm font-medium hover:bg-primary hover:border-primary transition-colors"
+                className="group cursor-pointer relative overflow-hidden rounded-sm border border-white/10 hover:border-primary transition-all"
               >
-                <item.icon className="w-4 h-4 text-primary group-hover:text-primary-foreground shrink-0 transition-colors" />
-                {item.label}
+                <div className="h-24 overflow-hidden">
+                  <img
+                    src={item.img}
+                    alt={item.label}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 brightness-50 group-hover:brightness-[0.35]"
+                  />
+                </div>
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 p-2">
+                  <div className="w-8 h-8 rounded-full bg-primary/80 flex items-center justify-center">
+                    <item.icon className="w-4 h-4 text-primary-foreground" />
+                  </div>
+                  <span className="text-white text-xs font-semibold text-center leading-tight">{item.label}</span>
+                </div>
               </Link>
             ))}
           </div>
