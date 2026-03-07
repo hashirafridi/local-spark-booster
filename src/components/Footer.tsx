@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const Footer = () => {
   return (
@@ -9,14 +10,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company info */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 bg-primary rounded flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-base">V</span>
-              </div>
-              <div className="leading-tight">
-                <span className="font-bold text-white text-base block leading-none">VIGILANT</span>
-                <span className="text-[9px] tracking-[0.2em] text-gray-400 uppercase">Security Services</span>
-              </div>
+            <div className="mb-4">
+              <img src={logo} alt="Vigilant Security" className="h-10 w-auto object-contain brightness-0 invert" />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mt-3">
               Delivering exceptional security services and peace of mind for businesses and individuals nationwide since 2004.

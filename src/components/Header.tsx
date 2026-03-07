@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -39,14 +40,8 @@ const Header = () => {
       <header className="bg-white sticky top-0 z-50 shadow-sm border-b border-border">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">V</span>
-            </div>
-            <div className="leading-tight">
-              <span className="font-bold text-secondary text-lg block leading-none">VIGILANT</span>
-              <span className="text-[10px] tracking-[0.2em] text-muted-foreground uppercase">Security Services</span>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img src={logo} alt="Vigilant Security" className="h-10 md:h-12 w-auto object-contain" />
           </Link>
 
           {/* Desktop nav */}
