@@ -283,6 +283,29 @@ const Index = () => {
         </div>
       </section>
 
+      {/* TRUSTED PARTNERS LOGOS */}
+      <section className="bg-card border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 py-10 md:py-14">
+          <p className="text-center text-muted-foreground text-sm font-semibold uppercase tracking-widest mb-8">
+            Trusted Partners To
+          </p>
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll gap-20 items-center">
+              {[...Array(8)].flatMap((_, setIndex) =>
+                [partnerLogo1, partnerLogo2].map((logo, i) => (
+                  <img
+                    key={`${setIndex}-${i}`}
+                    src={logo}
+                    alt="Partner logo"
+                    className="shrink-0 h-28 md:h-36 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                  />
+                ))
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* NEWS & VIEWS */}
       <section className="bg-muted">
         <div className="max-w-7xl mx-auto px-4 py-14 md:py-20">
@@ -315,29 +338,6 @@ const Index = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TRUSTED PARTNERS LOGOS */}
-      <section className="bg-white border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 py-10 md:py-14">
-          <p className="text-center text-muted-foreground text-sm font-semibold uppercase tracking-widest mb-8">
-            Trusted Partners To
-          </p>
-          <div className="relative overflow-hidden">
-            <div className="flex animate-scroll gap-20 items-center">
-              {[...Array(8)].flatMap((_, setIndex) =>
-                [partnerLogo1, partnerLogo2].map((logo, i) => (
-                  <img
-                    key={`${setIndex}-${i}`}
-                    src={logo}
-                    alt="Partner logo"
-                    className="shrink-0 h-24 md:h-32 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
-                  />
-                ))
-              )}
-            </div>
           </div>
         </div>
       </section>
