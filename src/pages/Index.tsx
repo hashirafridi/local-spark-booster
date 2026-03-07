@@ -206,10 +206,10 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {services.map((s, index) => (
+            {visibleServices.map((s, index) => (
               <div
                 key={s.title}
-                className="bg-white rounded-lg overflow-hidden hover:shadow-lg transition-shadow group border border-border"
+                className="bg-card rounded-lg overflow-hidden hover:shadow-lg transition-shadow group border border-border"
               >
                 <div className="h-36 overflow-hidden relative">
                   <img
@@ -234,6 +234,17 @@ const Index = () => {
               </div>
             ))}
           </div>
+
+          {!showAllServices && services.length > 6 && (
+            <div className="text-center mt-8">
+              <button
+                onClick={() => setShowAllServices(true)}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded hover:opacity-90 transition-opacity text-sm"
+              >
+                See More Services <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
