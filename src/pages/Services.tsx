@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Phone, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight, Heart, Shield, Building2, Briefcase, Landmark, Users, UserCheck, Key, Scale, ShoppingBag } from "lucide-react";
 import heroBg from "@/assets/service-1.jpg";
 import qualitySolutionsImg from "@/assets/quality-solutions.jpg";
 import partnerLogo1 from "@/assets/partner-logo-1.png";
@@ -8,17 +8,21 @@ import partnerAchilles from "@/assets/partner-achilles.jpg";
 import partnerIso from "@/assets/partner-iso9001.png";
 import partnerSafe from "@/assets/partner-safecontractor.jpg";
 
+import service1 from "@/assets/service-1.jpg";
+import service2 from "@/assets/service-2.jpg";
+import service3 from "@/assets/service-3.jpg";
+
 const sectionLinks = [
-  "Care & Housing Security",
-  "Close Protection",
-  "Construction Site Security",
-  "Contract Security",
-  "Corporate Security",
-  "Event Security Services",
-  "Guarding Services",
-  "Keyholding Services",
-  "Public Sector Protection",
-  "Retail Security Services",
+  { label: "Care & Housing Security", icon: Heart, img: service1 },
+  { label: "Close Protection", icon: Shield, img: service2 },
+  { label: "Construction Site Security", icon: Building2, img: service3 },
+  { label: "Contract Security", icon: Briefcase, img: service1 },
+  { label: "Corporate Security", icon: Landmark, img: service2 },
+  { label: "Event Security Services", icon: Users, img: service3 },
+  { label: "Guarding Services", icon: UserCheck, img: service1 },
+  { label: "Keyholding Services", icon: Key, img: service2 },
+  { label: "Public Sector Protection", icon: Scale, img: service3 },
+  { label: "Retail Security Services", icon: ShoppingBag, img: service1 },
 ];
 
 const Services = () => {
@@ -56,13 +60,25 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 py-10 md:py-14">
           <h2 className="text-white font-bold text-lg md:text-xl mb-6">In This Section</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-            {sectionLinks.map((label) => (
+            {sectionLinks.map((item) => (
               <Link
-                key={label}
+                key={item.label}
                 to="/services"
-                className="px-4 py-3 bg-white/5 border border-white/10 rounded text-white text-sm font-medium hover:bg-primary hover:border-primary transition-colors text-center"
+                className="group cursor-pointer relative overflow-hidden rounded-sm border border-white/10 hover:border-primary transition-all"
               >
-                {label}
+                <div className="h-24 overflow-hidden">
+                  <img
+                    src={item.img}
+                    alt={item.label}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 brightness-50 group-hover:brightness-[0.35]"
+                  />
+                </div>
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 p-2">
+                  <div className="w-8 h-8 rounded-full bg-primary/80 flex items-center justify-center">
+                    <item.icon className="w-4 h-4 text-primary-foreground" />
+                  </div>
+                  <span className="text-white text-xs font-semibold text-center leading-tight">{item.label}</span>
+                </div>
               </Link>
             ))}
           </div>
