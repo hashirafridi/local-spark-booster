@@ -108,70 +108,57 @@ const Contact = () => {
             {offices.map((office) => (
               <div
                 key={office.city}
-                className="border border-border rounded-sm p-6 hover:border-primary/30 transition-colors bg-card"
+                className="border border-border rounded-sm p-5 hover:border-primary/30 transition-colors bg-card"
               >
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground">{office.city}</h3>
+                <div className="flex items-center gap-2 mb-4 pb-3 border-b border-border">
+                  <MapPin className="w-4 h-4 text-primary shrink-0" />
+                  <h3 className="text-lg font-bold text-foreground">{office.city}</h3>
                 </div>
 
-                <div className="space-y-4 text-sm">
-                  <div className="flex items-start gap-3 text-muted-foreground">
-                    <Building2 className="w-4 h-4 mt-0.5 shrink-0 text-primary/60" />
-                    <div className="leading-relaxed">
-                      {office.lines.map((line, i) => (
-                        <span key={i} className="block">{line}</span>
-                      ))}
-                    </div>
+                <div className="flex gap-6 text-sm">
+                  {/* Left - Address */}
+                  <div className="flex-1 text-muted-foreground leading-relaxed">
+                    {office.lines.map((line, i) => (
+                      <span key={i} className="block">{line}</span>
+                    ))}
                   </div>
 
-                  <div className="flex items-start gap-3">
-                    <Phone className="w-4 h-4 mt-0.5 shrink-0 text-primary/60" />
+                  {/* Right - Contact details */}
+                  <div className="flex-1 space-y-3">
                     <div>
-                      <span className="block text-muted-foreground text-xs font-semibold uppercase tracking-wider mb-1">Telephone</span>
+                      <span className="block text-muted-foreground text-xs font-semibold uppercase tracking-wider mb-0.5">Telephone</span>
                       {office.phone.map((p, i) => (
-                        <a key={i} href={`tel:${p.replace(/[\s()]/g, "")}`} className="block text-foreground hover:text-primary transition-colors">
+                        <a key={i} href={`tel:${p.replace(/[\s()]/g, "")}`} className="block text-foreground hover:text-primary transition-colors text-sm">
                           {p}
                         </a>
                       ))}
                     </div>
-                  </div>
 
-                  {office.fax && (
-                    <div className="flex items-start gap-3">
-                      <Printer className="w-4 h-4 mt-0.5 shrink-0 text-primary/60" />
+                    {office.fax && (
                       <div>
-                        <span className="block text-muted-foreground text-xs font-semibold uppercase tracking-wider mb-1">Fax</span>
-                        <span className="text-foreground">{office.fax}</span>
+                        <span className="block text-muted-foreground text-xs font-semibold uppercase tracking-wider mb-0.5">Fax</span>
+                        <span className="text-foreground text-sm">{office.fax}</span>
                       </div>
-                    </div>
-                  )}
+                    )}
 
-                  {office.mobile && (
-                    <div className="flex items-start gap-3">
-                      <Phone className="w-4 h-4 mt-0.5 shrink-0 text-primary/60" />
+                    {office.mobile && (
                       <div>
-                        <span className="block text-muted-foreground text-xs font-semibold uppercase tracking-wider mb-1">Mobile</span>
-                        <a href={`tel:${office.mobile.replace(/[\s()]/g, "")}`} className="text-foreground hover:text-primary transition-colors">
+                        <span className="block text-muted-foreground text-xs font-semibold uppercase tracking-wider mb-0.5">Mobile</span>
+                        <a href={`tel:${office.mobile.replace(/[\s()]/g, "")}`} className="text-foreground hover:text-primary transition-colors text-sm">
                           {office.mobile}
                         </a>
                       </div>
-                    </div>
-                  )}
+                    )}
 
-                  {office.control && (
-                    <div className="flex items-start gap-3">
-                      <Clock className="w-4 h-4 mt-0.5 shrink-0 text-primary/60" />
+                    {office.control && (
                       <div>
-                        <span className="block text-muted-foreground text-xs font-semibold uppercase tracking-wider mb-1">24hr Control</span>
-                        <a href={`tel:${office.control.replace(/[\s()]/g, "")}`} className="text-foreground hover:text-primary transition-colors font-semibold">
+                        <span className="block text-muted-foreground text-xs font-semibold uppercase tracking-wider mb-0.5">24hr Control</span>
+                        <a href={`tel:${office.control.replace(/[\s()]/g, "")}`} className="text-foreground hover:text-primary transition-colors text-sm font-semibold">
                           {office.control}
                         </a>
                       </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
