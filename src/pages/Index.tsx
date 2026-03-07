@@ -126,6 +126,9 @@ const news = [
 ];
 
 const Index = () => {
+  const [showAllServices, setShowAllServices] = useState(false);
+  const visibleServices = showAllServices ? services : services.slice(0, 6);
+
   return (
     <div className="min-h-screen">
       {/* HERO */}
