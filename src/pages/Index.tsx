@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import {
   Shield, Users, Building2, ShoppingBag, Landmark, Heart, UserCheck, Camera,
   ClipboardCheck, Award, GraduationCap, Settings, TrendingUp, ChevronRight,
-  Phone, ArrowRight, CheckCircle2, Calendar
+  Phone, ArrowRight, CheckCircle2
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import heroVideo from "@/assets/hero-video.mp4";
@@ -12,6 +12,8 @@ import service3 from "@/assets/service-3.jpg";
 import whyChooseImg from "@/assets/why-choose-us.jpg";
 import partnerLogo1 from "@/assets/partner-logo-1.png";
 import partnerLogo2 from "@/assets/partner-logo-2.png";
+import news1 from "@/assets/news-1.jpg";
+import news2 from "@/assets/news-2.jpg";
 
 const serviceImages = [service1, service2, service3];
 
