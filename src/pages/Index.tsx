@@ -12,6 +12,9 @@ import service3 from "@/assets/service-3.jpg";
 import whyChooseImg from "@/assets/why-choose-us.jpg";
 import partnerLogo1 from "@/assets/partner-logo-1.png";
 import partnerLogo2 from "@/assets/partner-logo-2.png";
+import partnerAchilles from "@/assets/partner-achilles.jpg";
+import partnerIso from "@/assets/partner-iso9001.png";
+import partnerSafe from "@/assets/partner-safecontractor.jpg";
 import news1 from "@/assets/news-1.jpg";
 import news2 from "@/assets/news-2.jpg";
 import solution1 from "@/assets/solution-1.jpg";
@@ -313,7 +316,7 @@ const Index = () => {
               <Link
                 to="/services"
                 key={item.title}
-                className="relative rounded-lg overflow-hidden group cursor-pointer"
+                className="relative rounded-sm overflow-hidden group cursor-pointer"
                 style={{ aspectRatio: "3/4" }}
               >
                 <img
@@ -321,8 +324,8 @@ const Index = () => {
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-5">
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/10 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 p-5">
                   <h3 className="text-lg font-bold text-white">{item.title}</h3>
                 </div>
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-5">
@@ -342,8 +345,8 @@ const Index = () => {
           </p>
           <div className="relative overflow-hidden">
             <div className="flex animate-scroll gap-20 items-center">
-              {[...Array(8)].flatMap((_, setIndex) =>
-                [partnerLogo1, partnerLogo2].map((logo, i) => (
+              {[...Array(4)].flatMap((_, setIndex) =>
+                [partnerLogo1, partnerLogo2, partnerAchilles, partnerIso, partnerSafe].map((logo, i) => (
                   <img
                     key={`${setIndex}-${i}`}
                     src={logo}
