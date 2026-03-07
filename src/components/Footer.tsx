@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Company info */}
           <div>
             <div className="mb-4">
-              <img src={logo} alt="Vigilant Security" className="h-10 w-auto object-contain brightness-0 invert" />
+              <img src={logo} alt="Vigilant Security" className="h-10 w-auto object-contain" />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mt-3">
               Delivering exceptional security services and peace of mind for businesses and individuals nationwide since 2004.
