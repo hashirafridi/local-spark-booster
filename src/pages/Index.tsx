@@ -88,10 +88,33 @@ const whyChoose = [
   },
 ];
 
+const newsImages = [news1, news2];
+
 const news = [
-  { title: "AI, a game changer", date: "September 30, 2025" },
-  { title: "Company Brochure", date: "June 30, 2025" },
-  { title: "Newsletter – Aug-24", date: "July 30, 2024" },
+  {
+    title: "The 5 winter risks that could cost you thousands – and how to prevent them",
+    date: "13-11-25",
+    desc: "When temperatures drop and the nights draw in, the risks to people and property rise. Harsh weather, festive shutdowns, and shorter days create the perfect conditions for disruption.",
+    tags: ["Advice and Guidance", "Site Security", "Vacant Property"],
+  },
+  {
+    title: "AI, a game changer for modern security operations",
+    date: "30-09-25",
+    desc: "Artificial intelligence is transforming the security industry with smarter surveillance, predictive analytics, and automated threat detection.",
+    tags: ["Technology", "CCTV", "Corporate Security"],
+  },
+  {
+    title: "Lone worker safety: what every employer needs to know",
+    date: "30-06-25",
+    desc: "Protecting lone workers is a legal obligation and a moral duty. Here's how to ensure your team stays safe when working alone.",
+    tags: ["Lone Worker", "Property Inspections", "Evictions"],
+  },
+  {
+    title: "How to secure your construction site against theft",
+    date: "30-07-24",
+    desc: "Construction site theft costs the UK industry millions each year. Discover proven strategies to protect your assets and materials.",
+    tags: ["Site Security", "Construction", "Risk Management"],
+  },
 ];
 
 const Index = () => {
