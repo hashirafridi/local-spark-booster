@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Phone, ChevronRight } from "lucide-react";
 import heroBg from "@/assets/service-1.jpg";
-import whyChooseImg from "@/assets/why-choose-us.jpg";
+import qualitySolutionsImg from "@/assets/quality-solutions.jpg";
 import partnerLogo1 from "@/assets/partner-logo-1.png";
 import partnerLogo2 from "@/assets/partner-logo-2.png";
 import partnerAchilles from "@/assets/partner-achilles.jpg";
@@ -138,7 +138,7 @@ const Services = () => {
               </div>
             </div>
             <div className="rounded-sm overflow-hidden shadow-lg">
-              <img src={whyChooseImg} alt="Security team" className="w-full h-full object-cover" />
+              <img src={qualitySolutionsImg} alt="Security team" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
