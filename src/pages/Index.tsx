@@ -128,7 +128,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* HERO */}
-      <section className="relative overflow-hidden" style={{ minHeight: "500px" }}>
+      <section className="relative overflow-hidden shadow-[0_8px_30px_-5px_rgba(0,0,0,0.6)]" style={{ minHeight: "500px", zIndex: 1 }}>
         <div className="absolute inset-0">
           <img src={heroBg} alt="Security services" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black/50" />
@@ -351,7 +351,7 @@ const Index = () => {
                     key={`${setIndex}-${i}`}
                     src={logo}
                     alt="Partner logo"
-                    className="shrink-0 h-28 md:h-36 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity"
+                    className="shrink-0 h-28 md:h-36 w-auto object-contain opacity-100 transition-opacity"
                   />
                 ))
               )}
