@@ -14,6 +14,10 @@ import partnerLogo1 from "@/assets/partner-logo-1.png";
 import partnerLogo2 from "@/assets/partner-logo-2.png";
 import news1 from "@/assets/news-1.jpg";
 import news2 from "@/assets/news-2.jpg";
+import solution1 from "@/assets/solution-1.jpg";
+import solution2 from "@/assets/solution-2.jpg";
+import solution3 from "@/assets/solution-3.jpg";
+import solution4 from "@/assets/solution-4.jpg";
 
 const serviceImages = [service1, service2, service3];
 
