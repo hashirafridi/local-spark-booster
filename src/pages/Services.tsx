@@ -138,7 +138,7 @@ const Services = () => {
               </div>
             </div>
             <div className="rounded-sm overflow-hidden shadow-lg">
-              <img src={whyChooseImg} alt="Security team" className="w-full h-full object-cover" />
+              <img src={qualitySolutionsImg} alt="Security team" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
