@@ -38,27 +38,29 @@ const HeroSection = () => {
           </div>
 
           {/* CTA buttons - positioned to overlap the video */}
-          <div className="relative z-20 mt-4">
-            <div className="inline-flex items-center bg-white rounded-sm shadow-lg border border-border overflow-hidden translate-y-1/2">
-              <Link
-                to="/services"
-                className="px-6 py-3.5 text-sm font-medium text-secondary hover:text-primary transition-colors whitespace-nowrap"
-              >
-                Get Protected Now
-              </Link>
-              <Link
-                to="/contact"
-                className="flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap"
-              >
-                Contact us today
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
 
       {/* Video / Image section */}
-      <div className="relative w-full -mt-6" style={{ height: "clamp(300px, 50vh, 600px)" }}>
+      <div className="relative w-full" style={{ height: "clamp(300px, 50vh, 600px)" }}>
+        {/* CTA buttons - overlapping white and video */}
+        <div className="absolute top-0 left-0 z-20 -translate-y-1/2 ml-6 md:ml-10 lg:ml-16">
+          <div className="inline-flex items-center bg-white rounded-sm shadow-lg border border-border overflow-hidden">
+            <Link
+              to="/services"
+              className="px-6 py-3.5 text-sm font-medium text-secondary hover:text-primary transition-colors whitespace-nowrap"
+            >
+              Get Protected Now
+            </Link>
+            <Link
+              to="/contact"
+              className="flex items-center gap-2 px-7 py-3.5 text-primary-foreground text-sm font-semibold transition-colors whitespace-nowrap"
+              style={{ backgroundColor: "#d60000" }}
+            >
+              Contact us today
+            </Link>
+          </div>
+        </div>
         <video
           autoPlay
           loop
