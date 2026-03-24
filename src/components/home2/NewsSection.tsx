@@ -20,7 +20,7 @@ const news = [
   {
     title: "Lone worker safety: what every employer needs to know",
     date: "30-06-25",
-    desc: "Protecting lone workers is a legal obligation and a moral duty. Here's how to ensure your team stays safe when working alone.",
+    desc: "Protecting lone workers is a legal and moral duty. Here's how to keep your team safe when working alone.",
     tags: ["Lone Worker", "Property Inspections", "Evictions"],
   },
   {
