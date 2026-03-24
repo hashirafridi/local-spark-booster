@@ -1,7 +1,9 @@
+import HeroSection from "@/components/home2/HeroSection";
+
 const Home2 = () => {
   return (
-    <div>
-      {/* Sections will be added here */}
+    <div className="min-h-screen">
+      <HeroSection />
     </div>
   );
 };
