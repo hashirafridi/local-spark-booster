@@ -10,9 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company info */}
           <div>
-            <div className="mb-4">
-              <img src={logo} alt="Vigilant Security" className="h-10 w-auto object-contain" />
-            </div>
+            <h3 className="font-semibold text-white text-lg">Vigilant Security</h3>
             <p className="text-gray-400 text-sm leading-relaxed mt-3">
               Delivering exceptional security services and peace of mind for businesses and individuals nationwide since 2004.
             </p>
