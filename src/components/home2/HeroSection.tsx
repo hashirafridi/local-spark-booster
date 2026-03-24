@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 import heroVideo from "@/assets/hero-video.mp4";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex flex-col">
+    <section className="flex flex-col">
       {/* Text area */}
-      <div className="bg-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 py-12 md:py-16 lg:py-20">
+      <div className="bg-white relative z-10">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 pt-12 md:pt-16 lg:pt-20 pb-20 md:pb-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start">
             {/* Left column */}
             <div>
@@ -25,21 +24,6 @@ const HeroSection = () => {
                   around you.
                 </span>
               </h1>
-
-              <div className="mt-8 md:mt-10 inline-flex items-center bg-white rounded shadow-md border border-border overflow-hidden">
-                <Link
-                  to="/services"
-                  className="px-5 py-3 text-sm font-medium text-secondary hover:text-primary transition-colors whitespace-nowrap"
-                >
-                  Get Protected Now
-                </Link>
-                <Link
-                  to="/contact"
-                  className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap"
-                >
-                  Contact us today
-                </Link>
-              </div>
             </div>
 
             {/* Right column */}
@@ -52,11 +36,29 @@ const HeroSection = () => {
               </p>
             </div>
           </div>
+
+          {/* CTA buttons - positioned to overlap the video */}
+          <div className="relative z-20 mt-4">
+            <div className="inline-flex items-center bg-white rounded-sm shadow-lg border border-border overflow-hidden translate-y-1/2">
+              <Link
+                to="/services"
+                className="px-6 py-3.5 text-sm font-medium text-secondary hover:text-primary transition-colors whitespace-nowrap"
+              >
+                Get Protected Now
+              </Link>
+              <Link
+                to="/contact"
+                className="flex items-center gap-2 px-7 py-3.5 bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap"
+              >
+                Contact us today
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Video / Image section */}
-      <div className="relative w-full" style={{ height: "clamp(300px, 50vh, 600px)" }}>
+      <div className="relative w-full -mt-6" style={{ height: "clamp(300px, 50vh, 600px)" }}>
         <video
           autoPlay
           loop
