@@ -8,7 +8,7 @@ const news = [
   {
     title: "The 5 winter risks that could cost you thousands – and how to prevent them",
     date: "13-11-25",
-    desc: "When temperatures drop and the nights draw in, the risks to people and property rise. Harsh weather, festive shutdowns, and shorter days create the perfect conditions for disruption.",
+    desc: "When temperatures drop, the risks to people and property rise. Harsh weather and festive shutdowns create conditions for disruption.",
     tags: ["Advice and Guidance", "Site Security", "Vacant Property"],
   },
   {
