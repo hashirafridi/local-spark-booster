@@ -44,17 +44,17 @@ const HeroSection = () => {
       {/* Video / Image section */}
       <div className="relative w-full" style={{ height: "clamp(300px, 50vh, 600px)" }}>
         {/* CTA buttons - overlapping white and video */}
-        <div className="absolute top-0 left-0 z-20 -translate-y-1/2 ml-6 md:ml-10 lg:ml-16">
-          <div className="inline-flex items-center bg-white rounded-sm shadow-lg border border-border overflow-hidden">
+        <div className="absolute top-0 left-0 z-20 -translate-y-1/2" style={{ marginLeft: "calc(2.5rem + 1rem)" }}>
+          <div className="inline-flex items-center bg-white rounded-sm shadow-lg border border-border overflow-hidden p-1.5 pl-0">
             <Link
               to="/services"
-              className="px-6 py-3.5 text-sm font-medium text-secondary hover:text-primary transition-colors whitespace-nowrap"
+              className="px-6 py-3 text-sm font-medium text-secondary hover:text-primary transition-colors whitespace-nowrap"
             >
               Get Protected Now
             </Link>
             <Link
               to="/contact"
-              className="flex items-center gap-2 px-7 py-3.5 text-primary-foreground text-sm font-semibold transition-colors whitespace-nowrap"
+              className="flex items-center gap-2 px-7 py-3 text-primary-foreground text-sm font-semibold rounded-sm transition-colors whitespace-nowrap"
               style={{ backgroundColor: "#d60000" }}
             >
               Contact us today
