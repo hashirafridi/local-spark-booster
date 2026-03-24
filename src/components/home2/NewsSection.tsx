@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import news1 from "@/assets/news-1.jpg";
 import news2 from "@/assets/news-2.jpg";
+import news3 from "@/assets/news-3.jpg";
+import news4 from "@/assets/news-4.jpg";
 
-const newsImages = [news1, news2];
+const newsImages = [news1, news2, news3, news4];
 
 const news = [
   {
