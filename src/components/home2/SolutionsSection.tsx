@@ -30,7 +30,7 @@ const solutions = [
   {
     icon: ShieldCheck,
     title: "Security & Guarding",
-    desc: "SIA compliant manned guarding and security in residence services",
+    desc: "SIA compliant manned guarding and security services",
   },
   {
     icon: Building2,
