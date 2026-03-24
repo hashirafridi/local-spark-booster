@@ -22,7 +22,7 @@ const StatsSection = () => {
           {stats.map((stat) => (
             <div
               key={stat.number}
-              className="relative border border-border bg-card p-8 md:p-10"
+              className="relative border border-muted-foreground/40 bg-card p-8 md:p-10"
             >
               <Cross className="absolute -top-2 -left-2" />
               <Cross className="absolute -top-2 -right-2" />
