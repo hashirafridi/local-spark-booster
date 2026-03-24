@@ -30,12 +30,12 @@ const solutions = [
   {
     icon: ShieldCheck,
     title: "Security & Guarding",
-    desc: "SIA compliant manned guarding and security in residence services",
+    desc: "SIA compliant manned guarding and security services",
   },
   {
     icon: Building2,
     title: "Vacant Property",
-    desc: "A comprehensive range of vacant property services, tailored to your needs",
+    desc: "Comprehensive vacant property services, tailored to you",
   },
 ];
 
@@ -108,7 +108,7 @@ const SolutionCard = ({ item }: { item: { icon: React.ElementType; title: string
           <h3 className="text-sm font-bold text-secondary">{item.title}</h3>
           <Icon className="w-5 h-5 text-muted-foreground shrink-0" />
         </div>
-        <p className="text-muted-foreground text-xs leading-relaxed">{item.desc}</p>
+        <p className="text-muted-foreground text-xs leading-relaxed line-clamp-2">{item.desc}</p>
       </div>
       <div className="mt-4 self-end">
         <div className="w-10 h-10 bg-muted flex items-center justify-center rounded-sm group-hover:bg-primary/10 transition-colors">
