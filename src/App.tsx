@@ -8,6 +8,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Locations from "./pages/Locations";
 import News from "./pages/News";
+import Home2 from "./pages/Home2";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
