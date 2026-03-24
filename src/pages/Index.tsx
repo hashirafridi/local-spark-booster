@@ -186,7 +186,7 @@ const Index = () => {
         <video
           className="w-full"
           style={{ maxHeight: "360px", objectFit: "cover" }}
-          src={heroVideo}
+          src={heroVideoAsset.url}
           autoPlay
           loop
           muted
