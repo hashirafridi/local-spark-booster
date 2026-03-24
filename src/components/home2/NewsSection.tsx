@@ -14,7 +14,7 @@ const news = [
   {
     title: "AI, a game changer for modern security operations",
     date: "30-09-25",
-    desc: "Artificial intelligence is transforming the security industry with smarter surveillance, predictive analytics, and automated threat detection.",
+    desc: "AI is transforming security with smarter surveillance, predictive analytics, and automated threat detection.",
     tags: ["Technology", "CCTV", "Corporate Security"],
   },
   {
