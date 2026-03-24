@@ -3,6 +3,7 @@ import SolutionsSection from "@/components/home2/SolutionsSection";
 import SolutionsCardsSection from "@/components/home2/SolutionsCardsSection";
 import ProcessSection from "@/components/home2/ProcessSection";
 import StatsSection from "@/components/home2/StatsSection";
+import CareersSection from "@/components/home2/CareersSection";
 import PartnersSection from "@/components/home2/PartnersSection";
 
 const Home2 = () => {
@@ -13,7 +14,11 @@ const Home2 = () => {
       <SolutionsCardsSection />
       <ProcessSection />
       <StatsSection />
+      <CareersSection />
       <PartnersSection />
+    </div>
+  );
+};
     </div>
   );
 };
