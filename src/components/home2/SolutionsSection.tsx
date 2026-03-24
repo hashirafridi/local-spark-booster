@@ -35,7 +35,7 @@ const solutions = [
   {
     icon: Building2,
     title: "Vacant Property",
-    desc: "A comprehensive range of vacant property services, tailored to your needs",
+    desc: "Comprehensive vacant property services, tailored to you",
   },
 ];
 
