@@ -17,8 +17,8 @@ const CareersSection = () => {
         <div className="flex justify-between py-4">
           {Array.from({ length: 16 }).map((_, i) => (
             <svg key={`top2-${i}`} width="12" height="12" viewBox="0 0 12 12" fill="none">
-              <line x1="6" y1="0" x2="6" y2="12" stroke="hsl(var(--border))" strokeWidth="1" />
-              <line x1="0" y1="6" x2="12" y2="6" stroke="hsl(var(--border))" strokeWidth="1" />
+              <line x1="6" y1="0" x2="6" y2="12" stroke="hsl(var(--muted-foreground))" strokeWidth="1" />
+              <line x1="0" y1="6" x2="12" y2="6" stroke="hsl(var(--muted-foreground))" strokeWidth="1" />
             </svg>
           ))}
         </div>
