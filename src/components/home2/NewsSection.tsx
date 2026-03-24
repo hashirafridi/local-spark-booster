@@ -26,7 +26,7 @@ const news = [
   {
     title: "How to secure your construction site against theft",
     date: "30-07-24",
-    desc: "Construction site theft costs the UK industry millions each year. Discover proven strategies to protect your assets and materials.",
+    desc: "Construction site theft costs millions each year. Discover strategies to protect your assets and materials.",
     tags: ["Site Security", "Construction", "Risk Management"],
   },
 ];
