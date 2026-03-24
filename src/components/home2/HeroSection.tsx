@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import heroVideo from "@/assets/hero-video.mp4";
+import heroVideoAsset from "@/assets/hero-video.mp4.asset.json";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
