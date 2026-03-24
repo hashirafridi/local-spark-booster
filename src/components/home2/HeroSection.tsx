@@ -43,22 +43,24 @@ const HeroSection = () => {
 
       {/* Video / Image section */}
       <div className="relative w-full" style={{ height: "clamp(300px, 50vh, 600px)" }}>
-        {/* CTA buttons - overlapping white and video */}
-        <div className="absolute top-0 left-0 z-20 -translate-y-1/2" style={{ marginLeft: "calc(2.5rem + 1rem)" }}>
-          <div className="inline-flex items-center bg-white rounded-sm shadow-lg border border-border overflow-hidden p-1.5 pl-0">
-            <Link
-              to="/services"
-              className="px-6 py-3 text-sm font-medium text-secondary hover:text-primary transition-colors whitespace-nowrap"
-            >
-              Get Protected Now
-            </Link>
-            <Link
-              to="/contact"
-              className="flex items-center gap-2 px-7 py-3 text-primary-foreground text-sm font-semibold rounded-sm transition-colors whitespace-nowrap"
-              style={{ backgroundColor: "#d60000" }}
-            >
-              Contact us today
-            </Link>
+        {/* CTA buttons - overlapping white and video, aligned with the grid */}
+        <div className="absolute top-0 left-0 right-0 z-20 -translate-y-1/2">
+          <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+            <div className="inline-flex items-center bg-white rounded-sm shadow-lg border border-border overflow-hidden p-1.5 pl-0">
+              <Link
+                to="/services"
+                className="px-6 py-3 text-sm font-medium text-secondary hover:text-primary transition-colors whitespace-nowrap"
+              >
+                Get Protected Now
+              </Link>
+              <Link
+                to="/contact"
+                className="flex items-center gap-2 px-7 py-3 text-primary-foreground text-sm font-semibold rounded-sm transition-colors whitespace-nowrap"
+                style={{ backgroundColor: "#d60000" }}
+              >
+                Contact us today
+              </Link>
+            </div>
           </div>
         </div>
         <video
