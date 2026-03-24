@@ -6,8 +6,8 @@ const stats = [
 
 const Cross = ({ className }: { className?: string }) => (
   <svg className={className} width="16" height="16" viewBox="0 0 16 16" fill="none">
-    <line x1="8" y1="0" x2="8" y2="16" stroke="hsl(var(--border))" strokeWidth="1" />
-    <line x1="0" y1="8" x2="16" y2="8" stroke="hsl(var(--border))" strokeWidth="1" />
+    <line x1="8" y1="0" x2="8" y2="16" stroke="hsl(var(--muted-foreground))" strokeWidth="1" />
+    <line x1="0" y1="8" x2="16" y2="8" stroke="hsl(var(--muted-foreground))" strokeWidth="1" />
   </svg>
 );
 
@@ -22,7 +22,7 @@ const StatsSection = () => {
           {stats.map((stat) => (
             <div
               key={stat.number}
-              className="relative border border-border bg-card p-8 md:p-10"
+              className="relative border border-muted-foreground/40 bg-card p-8 md:p-10"
             >
               <Cross className="absolute -top-2 -left-2" />
               <Cross className="absolute -top-2 -right-2" />
