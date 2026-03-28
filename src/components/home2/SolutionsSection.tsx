@@ -88,7 +88,7 @@ const SolutionCard = ({ item }: { item: { icon: React.ElementType; title: string
         loading="lazy"
         className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
       />
-      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-colors" />
+      <div className="absolute inset-0 bg-black/25 group-hover:bg-black/35 transition-colors" />
       <div className="relative p-5 flex flex-col justify-between h-full">
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-sm font-bold text-white">{item.title}</h3>
