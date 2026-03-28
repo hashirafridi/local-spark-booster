@@ -1,42 +1,21 @@
 import { Link } from "react-router-dom";
 import { Radio, Camera, DoorOpen, Fence, UserCheck, ShieldCheck, Building2, ArrowDownRight } from "lucide-react";
+import solutionAlarm from "@/assets/solution-alarm.jpg";
+import solutionCctv from "@/assets/solution-cctv.jpg";
+import solutionEntry from "@/assets/solution-entry.jpg";
+import solutionFencing from "@/assets/solution-fencing.jpg";
+import solutionLoneworker from "@/assets/solution-loneworker.jpg";
+import solutionGuarding from "@/assets/solution-guarding.jpg";
+import solutionVacant from "@/assets/solution-vacant.jpg";
 
 const solutions = [
-  {
-    icon: Radio,
-    title: "Alarms",
-    desc: "Effective protection for your site or property",
-  },
-  {
-    icon: Camera,
-    title: "CCTV",
-    desc: "A range of options with intelligent AI monitoring",
-  },
-  {
-    icon: DoorOpen,
-    title: "Entry Systems",
-    desc: "Take complete control of who can access your site",
-  },
-  {
-    icon: Fence,
-    title: "Fencing & Gating",
-    desc: "Advanced perimeter solutions for any situation",
-  },
-  {
-    icon: UserCheck,
-    title: "Lone Worker Protection",
-    desc: "Peace of mind for you and your workforce",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Security & Guarding",
-    desc: "SIA compliant manned guarding and security services",
-  },
-  {
-    icon: Building2,
-    title: "Vacant Property",
-    desc: "Comprehensive vacant property services, tailored to you",
-  },
+  { icon: Radio, title: "Alarms", img: solutionAlarm },
+  { icon: Camera, title: "CCTV", img: solutionCctv },
+  { icon: DoorOpen, title: "Entry Systems", img: solutionEntry },
+  { icon: Fence, title: "Fencing & Gating", img: solutionFencing },
+  { icon: UserCheck, title: "Lone Worker Protection", img: solutionLoneworker },
+  { icon: ShieldCheck, title: "Security & Guarding", img: solutionGuarding },
+  { icon: Building2, title: "Vacant Property", img: solutionVacant },
 ];
 
 const SolutionsSection = () => {
@@ -95,24 +74,30 @@ const SolutionsSection = () => {
   );
 };
 
-const SolutionCard = ({ item }: { item: { icon: React.ElementType; title: string; desc: string } }) => {
+const SolutionCard = ({ item }: { item: { icon: React.ElementType; title: string; img: string } }) => {
   const Icon = item.icon;
   return (
     <Link
       to="/services"
-      className="group border-t border-border p-5 flex flex-col justify-between hover:bg-muted/50 transition-colors"
+      className="group relative overflow-hidden border-t border-border flex flex-col justify-between"
       style={{ minHeight: "200px" }}
     >
-      <div>
+      <img
+        src={item.img}
+        alt={item.title}
+        loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+      />
+      <div className="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition-colors" />
+      <div className="relative p-5 flex flex-col justify-between h-full">
         <div className="flex items-start justify-between mb-3">
-          <h3 className="text-sm font-bold text-secondary">{item.title}</h3>
-          <Icon className="w-5 h-5 text-muted-foreground shrink-0" />
+          <h3 className="text-sm font-bold text-white">{item.title}</h3>
+          <Icon className="w-5 h-5 text-white/70 shrink-0" />
         </div>
-        <p className="text-muted-foreground text-xs leading-relaxed line-clamp-2">{item.desc}</p>
-      </div>
-      <div className="mt-4 self-end">
-        <div className="w-10 h-10 bg-muted flex items-center justify-center rounded-sm group-hover:bg-primary/10 transition-colors">
-          <ArrowDownRight className="w-4 h-4 text-secondary" />
+        <div className="mt-4 self-end">
+          <div className="w-10 h-10 bg-white/20 flex items-center justify-center rounded-sm group-hover:bg-primary/80 transition-colors">
+            <ArrowDownRight className="w-4 h-4 text-white" />
+          </div>
         </div>
       </div>
     </Link>

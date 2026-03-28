@@ -55,7 +55,7 @@ const NewsSection = () => {
               <div className="p-5">
                 <p className="text-xs text-muted-foreground mb-2">{item.date}</p>
                 <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">{item.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-3">{item.desc}</p>
+                
                 <div className="flex flex-wrap gap-1.5">
                   {item.tags.map((tag) => (
                     <span key={tag} className="text-xs px-2.5 py-1 rounded-full border border-border text-muted-foreground">
