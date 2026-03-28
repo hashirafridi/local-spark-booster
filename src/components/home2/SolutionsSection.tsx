@@ -56,13 +56,13 @@ const SolutionsSection = () => {
           {/* Right column - solutions grid */}
           <div>
             {/* First row - 3 columns */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-0">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {solutions.slice(0, 3).map((item) => (
                 <SolutionCard key={item.title} item={item} />
               ))}
             </div>
             {/* Second row - 4 columns */}
-            <div className="grid grid-cols-1 sm:grid-cols-4 gap-0">
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 mt-3">
               {solutions.slice(3).map((item) => (
                 <SolutionCard key={item.title} item={item} />
               ))}
